@@ -1,0 +1,190 @@
+﻿#CTM input[type=text]{color:unset;padding:10px;background-color:#FFFFFF;border:none;margin:0 10px 0 0;display:inline-block;max-width:190px;vertical-align: middle;}
+#CTM .filtros {
+	background-color: #3ce889;
+	padding:20px;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-align-content: center;
+	-ms-flex-line-pack: center;
+	align-content: center;
+	-webkit-align-items: flex-start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+}
+#CTM .filtros__columnas:not(:first-child) {
+    margin-left: 15px;
+}
+#CTM .filtros__columnas {
+	flex: 0 1 auto;
+    align-self: center;
+}
+#CTM .filtros__label {
+	margin: 0 10px 0 0;
+	color: #333;
+    font-weight: 800;
+	display: inline-block;
+	vertical-align: middle;
+}
+#CTM #filtros__buscar { vertical-align: middle; }
+#CTM #filtros__buscar,
+#CTM #filtros__reset,
+#CTM .paginacion__boton {
+    cursor: pointer;
+    -webkit-appearance: button;
+    background-color: #00a665;
+    color: #fff!important;
+    box-shadow: 0px 3px 0px 0px #008551;
+    margin-bottom: 3px;
+    display: inline-block;
+    padding: 12px 25px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    line-height: 100%;
+    max-width: 100%;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+}
+#CTM #filtros__buscar:hover,
+#CTM #filtros__reset:hover,
+#CTM .paginacion__boton:hover {
+	background-color: #009a5e;
+}
+#CTM .paginacion__boton--activo {
+	background-color: #008551;
+}
+#CTM .paginacion__boton,
+#CTM .paginacion__boton--activo {
+	margin: 0 10px 10px 0;
+    width: 50px;
+    height: 40px;
+    line-height: 20px;
+    padding: 0;
+    font-size: 14px;
+}
+#CTM .paginacion__boton--activo {
+	cursor: default;
+	pointer-events: none;
+}
+#CTM .cantidad-resultados {
+	display: flex;
+	justify-content: space-between;
+	margin:0 0 10px 0;
+}
+#CTM .resultados {
+	padding: 10px 0;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-align-content: stretch;
+	-ms-flex-line-pack: stretch;
+	align-content: stretch;
+	-webkit-align-items: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+}
+#CTM .resultados__mensaje {
+	text-align: center;
+}
+
+#CTM .resultado__container {
+	margin: 0 0 10px 0;
+	border-bottom: 1px solid #cccccc;
+	-webkit-flex: 0 1 auto;
+	-ms-flex: 0 1 auto;
+	flex: 0 1 auto;
+	-webkit-align-self: auto;
+	-ms-flex-item-align: auto;
+	align-self: auto;
+}
+
+#CTM .resultado__cabecera {
+	background-color: rgba(84, 247, 80, 0.24);
+	color: white;
+	display: flex;
+	justify-content: space-between;
+}
+
+#CTM .resultado__nombre {
+	color: #6f6f6f;
+	font-weight: bold;
+	padding: 5px 10px;
+	text-transform: uppercase;
+}
+
+#CTM .resultado__estado {
+	text-align: center;
+	padding: 5px 10px;
+	width: 180px;
+	background-color: #00a665;
+}
+#CTM .resultado__estado--alta {
+	background-color: #f13a3a;
+}
+
+#CTM .resultado__estado--media {
+	color: #393939;
+	background-color: #efe93e;
+}
+
+#CTM .resultado__estado--ninguno {
+	display: none;
+}
+
+#CTM .resultado__info {
+	margin: 10px 35px 0;
+    line-height: 1.5em;
+}
+
+@media all and (max-width: 39rem) {
+	#CTM .filtros {		
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		position: relative;
+	}
+	#CTM .filtros__columnas:first-child {
+		flex: 1 0 100%;
+	}
+	
+	#CTM input[name=nombre] {
+		max-width: unset;
+		width: 100%;
+	}
+	#CTM #filtros__buscar {
+		margin-top: 20px;
+	}
+	#CTM .filtros__columnas:not(:first-child) {
+		position: absolute;
+		margin:0;
+		bottom:20px;
+		right: 20px;
+	}
+}
+
+@media all and (max-width: 540px) {
+	#CTM .resultado__cabecera {
+		flex-direction: column;
+	}
+	#CTM .resultado__estado {
+		width: unset;
+	}
+}
